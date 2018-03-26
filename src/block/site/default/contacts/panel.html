@@ -1,0 +1,97 @@
+<div class="{{content_prefix}}panel  {{content_mod}}  is--full">
+	<div class="{{content_prefix}}container container  is--poss  {{content_mod}}">
+		<div class="{{block_prefix}}inner">
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/heading.html" 
+				header_prefix="page-header__" 
+				header_mod="{{block_heading_mod}}"
+				header_level="h2"
+				header="{{block_heading}}"
+			]]
+			<div class="{{block_prefix}}item-group">	
+				<div class="{{block_prefix}}item">
+					[[azbntple 
+						tpl="/src/block/site/default/contacts/item-icon.html" 
+						block_prefix="kontakty-item__"
+						block_mod="is--icon"
+						block_heading="Адрес:"
+						block_text="{{contacts.address}}"
+						block_link="  "
+						block_attr="  "
+						block_icon="contacts-address"
+					]]			
+				</div>
+				<div class="{{block_prefix}}item">
+					[[azbntple 
+						tpl="/src/block/site/default/contacts/item-icon.html" 
+						block_prefix="kontakty-item__"
+						block_mod="is--icon"
+						block_heading="GPS-координаты:"
+						block_text="{{contacts.gps}}"
+						block_link="  "
+						block_attr="  "
+						block_icon="contacts-gps"
+					]]			
+				</div>
+				<div class="{{block_prefix}}item">
+					[[azbntple 
+						tpl="/src/block/site/default/contacts/item-icon-tel.html" 
+						block_prefix="kontakty-item__"
+						block_mod="is--icon  is--tel"
+						block_heading="Контактные телефоны:"
+						block_name="{{contacts.phone}}"
+						block_link="tel:{{contacts.phone_tel}}"
+						block_name2="{{contacts.phone2}}"
+						block_link2="tel:{{contacts.phone2_tel}}"
+						block_attr="  "
+						block_icon="contacts-tel"
+					]]			
+				</div>
+				<div class="{{block_prefix}}item">
+					[[azbntple 
+						tpl="/src/block/site/default/contacts/item-icon-link.html" 
+						block_prefix="kontakty-item__"
+						block_mod="is--icon"
+						block_heading="E-mail:"
+						block_name="{{contacts.email}}"
+						block_link="mailto:{{contacts.email}}"
+						block_attr="  "
+						block_icon="contacts-email"
+					]]			
+				</div>
+				<div class="{{block_prefix}}item  is--btn">		
+					[[azbntple 
+						tpl="/src/block/site/default/button/link.html"
+						button_prefix="btn__" 
+						button_mod="is--sm"
+						button_link="{{page.help}}#block-requisites"
+						button_name="Реквизиты"
+					]]
+							
+				</div>	
+			</div>
+		</div>
+		<div class="{{block_prefix}}legend">
+			<div class="{{block_prefix}}row  row  is--wrap  is--jcfe">
+				<div class="{{block_prefix}}cols  cols">
+					<div class="{{block_prefix}}legend-item">
+						<img class="{{block_prefix}}legend-icon" src="{{url-path-img}}/default/legend-area.png" alt="">
+						— границы Корсуньской пустыни
+
+					</div>
+				</div>
+				<div class="{{block_prefix}}cols  cols">
+					<div class="{{block_prefix}}legend-item">
+						<img class="{{block_prefix}}legend-icon" src="{{url-path-img}}/default/legend-plus.png" alt="">
+						— постройки Пустыни
+					</div>		 			
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="{{block_prefix}}map" id="yandex-map"></div>
+	<div class="azbn__contacts__item-point" data-contact='{"coords" : [52.719333,36.99349]}'></div>
+	<div class="azbn__contacts__item" data-contact='{"title" : "Купель «Живоносный источник»","link" : "{{page.building_card}}", "coords" : [52.717418,36.994456]}'></div>
+	<div class="azbn__contacts__item" data-contact='{"title" : "Купель «Живоносный источник»","link" : "{{page.building_card}}", "coords" : [52.719021,36.992589]}'></div>
+	<div class="azbn__contacts__item" data-contact='{"title" : "Купель «Живоносный источник»","link" : "{{page.building_card}}", "coords" : [52.719424,36.99497]}'></div>
+</div>

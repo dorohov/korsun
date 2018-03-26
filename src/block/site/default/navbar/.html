@@ -1,0 +1,95 @@
+<nav class="{{class}} navbar {{navbar_mod}}">
+	<div class="{{navbar_prefix}}inner {{navbar_mod}}">
+		<div class="container {{navbar_prefix}}container {{navbar_mod}}">
+			<div class="{{navbar_prefix}}header {{navbar_mod}}">
+				<div class="row {{navbar_prefix}}row-header {{navbar_mod}}">
+					<div class="cols {{navbar_prefix}}cols-header  is--hamburger {{navbar_mod}}">
+						<div class="{{navbar_prefix}}hamburger {{navbar_mod}}">
+							<button class="{{navbar_prefix}}hamburger-btn hamburger__item" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+								<span class="hamburger__line  is--left"></span>
+								<span class="hamburger__line  is--center"></span>
+								<span class="hamburger__line  is--center-top"></span>
+								<span class="hamburger__line  is--right"></span>
+							</button>
+						</div>
+					</div>
+					<div class="cols {{navbar_prefix}}cols-header  is--brand {{navbar_mod}}">
+						<a class="{{navbar_prefix}}brand" href="{{page.index}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</a> 
+					</div>
+					<div class="cols {{navbar_prefix}}cols-header  is--tel {{navbar_mod}}">
+						<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel  is--icon {{navbar_mod}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="contacts-tel" ]]</a>
+					</div>
+				</div>
+			</div>
+				
+			<div class="{{navbar_prefix}}collapse {{navbar_mod}}">
+				<div class="{{navbar_prefix}}collapse-inner {{navbar_mod}}">
+					<ul class="{{navbar_prefix}}nav {{navbar_mod}}">
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="Главная" 
+							navbar_link="{{page.index}}"
+							navbar_mod="is--index  {{navbar_mod}}" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item-drop-about.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="О корсуни" 
+							navbar_link="{{page.about}}"
+							navbar_mod="{{navbar_mod}}" 
+						]]  
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item-drop-event.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="События" 
+							navbar_link="{{page.event}}"
+							navbar_mod="{{navbar_mod}} {{navbar_mod}}" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="Помощь" 
+							navbar_link="{{page.help}}"
+							navbar_mod="{{navbar_mod}}" 
+						]] 
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="Стройка" 
+							navbar_link="{{page.building}}"
+							navbar_mod="{{navbar_mod}}" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item-logotip.html" 
+							navbar_prefix="navbar__" 
+							navbar_link="{{page.index}}"
+							navbar_mod="is--logotip  {{navbar_mod}}" 
+						]]
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item-drop-spiritual.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="Духовная жизнь" 
+							navbar_link="{{page.spiritual}}"
+							navbar_mod="{{navbar_mod}}" 
+						]] 
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="Паломничество" 
+							navbar_link="{{page.pilgrimage}}"
+							navbar_mod="{{navbar_mod}}" 
+						]]	
+						[[azbntple 
+							tpl="/src/block/site/default/navbar/item.html" 
+							navbar_prefix="navbar__" 
+							navbar_name="Контакты"
+							navbar_link="{{page.contacts}}"
+							navbar_mod="{{navbar_mod}}" 
+						]]	
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

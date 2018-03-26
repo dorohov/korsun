@@ -1,0 +1,99 @@
+<main class="{{content_prefix}}panel {{content_mod}}" role="main">
+	<div class="{{content_prefix}}container container  {{content_mod}}  is--full">
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/panel-small.html" 
+			block_prefix="page-header__" 
+			block_mod="{{block_heading_mod}}"
+			block_heading_level="h1"
+			header="{{block_heading}}"
+			block_bread_mod="{{block_heading_mod}}"
+			block_bread_level1="{{block_bread_level1}}"
+			block_bread_level1_link="{{block_bread_level1_link}}"
+		]]
+		<div class="{{content_prefix}}elem-group  {{content_mod}}">
+			<div class="{{content_prefix}}elem  {{content_mod}}">
+				<div class="{{content_prefix}}text  text__block  {{content_mod}}">
+					<table>
+						<thead>
+							<tr>
+								<th>Дата</th>
+								<th>Маршрут паломнической поездки</th>
+								<th>Отъезд</th>
+								<th class="is--right">Пожертвование</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>17-18 марта</td>
+								<td>Серпухов (икона "Неупиваемая Чаша"). Давидова Пустынь. Талеж (св. источник)</td>
+								<td>17 марта (сб.) в&nbsp;23.00</td>
+								<td class="is--right">1500 <span class="is--ruble"></span></td>
+							</tr>
+							<tr>
+								<td>25 марта</td>
+								<td>
+									<div>Корсунская пустынь.</div>
+									<div>Обязательна запись по тел. 8(980) 364-89-16, 8(906) 570-83-37 - Людмила.</div>
+								</td>
+								<td>25 марта (вc.) в&nbsp;06.30</td>
+								<td class="is--right">600 <span class="is--ruble"></span></td>
+							</tr>
+							<tr>
+								<td>30 марта - 01&nbsp;апреля</td>
+								<td>Дивеево. Арзамас (Вербное воскресенье)</td>
+								<td>
+									<div>30 марта (пт.)</div>
+									<div>из Орла в&nbsp;18.00,</div>
+									<div>из Ливен в&nbsp;20.00</div>
+								</td>
+								<td class="is--right">4200 <span class="is--ruble"></span></td>
+							</tr>
+							<tr>
+								<td>07-08 апреля</td>
+								<td>Корсунская пустынь. Пасхальная служба. Обязательна запись по тел. 8(980) 364-89-16, 8(906) 570-83-37 - Людмила.</td>
+								<td>07 апреля (сб.) в&nbsp;17.00</td>
+								<td class="is--right">600 <span class="is--ruble"></span></td>
+							</tr>
+							<!--<tr>
+								<td>14-15 апреля</td>
+								<td>Оптина Пустынь. Клыково. Шамордино</td>
+								<td>14 апреля (сб.) в&nbsp;10.00</td>
+								<td class="is--right">2000 <span class="is--ruble"></span></td>
+							</tr>-->
+						</tbody>
+					</table>
+				</div>				
+				[[azbntple 
+					tpl="/src/block/site/default/social/panel-pilgrimage.html" 
+					block_prefix="social-panel__" 
+					block_mod="{{content_mod}}" 
+					block_heading="Отправление от памятника Лескову (Михайло-Архангельский переулок, рядом с Успенским собором)"
+				]]
+				<div class="{{content_prefix}}btn  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/button/link-icon-name.html"
+						button_prefix="btn-icon__" 
+						button_mod="  "
+						button_icon="print"
+						button_link="javascript:(print());"
+						button_name="Распечатать расписание поездок" 
+					]]
+				</div>
+				<div class="{{content_prefix}}label  {{content_mod}}">
+					<div class="{{content_prefix}}label-item  {{content_mod}}">
+						Принимая участие в поездке, Вы жертвуете на строительство нашей обители
+					</div>
+				</div>
+				<div class="{{content_prefix}}btn  is--center  {{content_mod}}">
+					[[azbntple 
+						tpl="/src/block/site/default/button/link.html"
+						button_prefix="btn__" 
+						button_mod="is--sm"
+						button_link="{{page.pilgrimage_reviews}}"
+						button_name="Отзывы о поездках"
+					]]
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

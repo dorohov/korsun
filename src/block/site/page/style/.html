@@ -1,0 +1,216 @@
+<div role="main"> 
+	<div class="content-block__panel">
+		<div class="container content-block__container">
+			[[azbntple 
+				tpl="/src/block/site/default/breadcrumb/level1.html" 
+				bread_prefix="breadcrumb__"
+				bread_mod="is--center"
+				level_1="Страница стилей"
+			]]	                 
+			[[azbntple 
+				tpl="/src/block/site/default/page-header/heading.html" 
+				header_prefix="page-header__" 
+				header_mod="is--page-heading  is--center"
+				header_level="h1"
+				header="Страница стилей"
+			]]	
+			<div style="margin-bottom: 6vw;">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="is--page-heading  is--center"
+					header_level="h1"
+					header="** Тест шрифта **"
+				]]	
+				<div>qwertyuiopasd fghjklzxcvbnm QWERTYUIOPAS DFGHJKLZXCVBNM</div>
+				<div>!@#$%^&*()</div>
+				<div>йцукёенгшщзхъ фывапролджэячсмитьбю ЙЦУКЕНГШЩЗХЪФЫВАП РОЛДЖЭЯЧСМИТЬБЮ</div>
+				<div>!"№;%:?*()</div>
+				<div>1234567890</div> 
+			</div>
+			<div style="margin-bottom: 6vw;">
+				[[azbntple 
+					tpl="/src/block/site/default/page-header/heading.html" 
+					header_prefix="page-header__" 
+					header_mod="is--page-heading  is--center"
+					header_level="h1"
+					header="** Стиль заголовков **"
+				]]	
+				<h1>Заголовок H1</h1>
+				<h2>Заголовок H2</h2>
+				<h3>Заголовок H3</h3>
+				<h4>Заголовок H4</h4>
+				<h5>Заголовок H5</h5>
+				<h6>Заголовок H6</h6>
+			</div> 
+			<div style="margin-bottom: 6vw;">
+			[[azbntple 
+				tpl="/src/block/site/default/color/include.html" 
+				block_heading="** Палитра **"
+			]]
+			</div> 
+			<div style="margin-bottom: 6vw;">
+			[[azbntple 
+				tpl="/src/block/site/default/button/include.html" 
+				block_heading="** Стили кнопок **"
+			]]
+			</div> 	
+			<div style="margin-bottom: 6vw;">
+				[[azbntple 
+					tpl="8/src/block/site/default/form/include.html" 
+					block_heading="** Форма **"
+				]]
+			</div>
+			[[azbntple 
+				tpl="/src/block/site/default/text/include.html" 
+				block_heading="** Текстовая страница **"
+			]]
+
+		[[azbntple 
+			tpl="/src/block/site/default/breadcrumb/include.html" 
+			block_heading="** Хлебные крошки **"
+		]]	
+		[[azbntple 
+			tpl="/src/block/site/default/pagination/include.html" 
+			block_heading="** Постраничная навигация **"
+		]]
+		</div>
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/form/panel-pilgrimage.html"
+		form_prefix="form-panel__"
+		form_mod="is--pilgrimage" 
+		form_bg="{{url-path-img}}/temp/bg-form-item1.jpg"
+		
+		header_mod="is--page-heading  is--form-heading  is--center  is--white"
+		heading_title="Паломничество"
+		heading_small="Наш монастырь по благословению митрополита Орловского и Болховского Антония, совместно с епархиальным паломническим отделом, организует паломнические поездки из Орла по святым местам"
+
+		form_header_mod="is--form  is--center  is--white"
+		form_heading="Запишитесь на поездку по святым местам заранее" 
+		form_heading_small="Заполните форму ниже" 
+
+		form_id="fpr"
+		form_mod_form="is--inline"
+		form_color="is--white"
+		form_btn_mod="is--sm"
+		form_btn_name="Оптравить"
+	]]
+	<!-- События -->
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-events.html"
+		content_prefix="content-block__"       
+		content_mod="is--category"      
+		block_heading_mod="is--page-heading  is--category  is--center"
+		block_heading="События" 
+	]]
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-news-index.html"
+		content_prefix="content-block__"
+		content_mod="is--news-index"
+		block_heading_mod="is--page-heading  is--center  is--news-index"
+		block_heading="Последние события"
+	]]	
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-news.html"
+		content_prefix="content-block__"       
+		content_mod="is--event  is--gallery"      
+		block_heading_mod="is--page-heading  is--tabs  is--center"
+		block_heading="Новости" 
+		block_bread_level1="События"
+		block_bread_level1_link="{{page.event}}"    
+	]]
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-gallery.html"
+		content_prefix="content-block__"       
+		content_mod="is--event  is--gallery"      
+		block_heading_mod="is--page-heading  is--tabs  is--center"
+		block_heading="Фотогалерея" 
+		block_bread_level1="События"
+		block_bread_level1_link="{{page.event}}"    
+	]]
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-calendar.html"
+		content_prefix="content-block__"       
+		content_mod="is--event  is--calendar"      
+		block_heading_mod="is--page-heading  is--tabs  is--center"
+		block_heading="Календарь богослужений"  
+		block_heading_small="Все богослужения проходят в храме Корсунской Божией Матери"  
+		block_bread_level1="События"
+		block_bread_level1_link="{{page.event}}"  
+		block_bg="{{url-path-img}}/temp/bg-calendar.jpg"   
+	]]
+	<!-- Стройка -->	
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-building.html"
+		content_prefix="content-block__"       
+		content_mod="is--event  is--building"      
+		block_heading_mod="is--page-heading   is--center"
+		block_heading="Стройка" 
+		block_heading_small="Объекты, в постройке которых вы можете принять участие"   
+	]]
+	<!-- Духовная жизнь  -->
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-spiritual-index.html"
+		content_prefix="content-block__"
+		content_mod="is--spiritual-index"
+		block_heading_mod="is--page-heading  is--center  is--news-index"
+		block_heading="Духовная жизнь"
+	]]	
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-spiritual.html"
+		content_prefix="content-block__"       
+		content_mod="is--category"      
+		block_heading_mod="is--page-heading  is--category  is--center"
+		block_heading="Духовная жизнь" 
+	]]
+	[[azbntple  
+		tpl="/src/block/site/default/content/panel-video.html"
+		content_prefix="content-block__"       
+		content_mod="is--spiritual  is--video"      
+		block_heading_mod="is--page-heading  is--tabs  is--center"
+		block_heading="Видеоархив"  
+		block_heading_small="  "  
+		block_bread_level1="Духовная жизнь"
+		block_bread_level1_link="{{page.spiritual}}"     
+	]] 
+	[[azbntple 
+		tpl="8/src/block/site/default/bg/card-plane.html" 
+		block_prefix="bg-plane__"
+		block_mod="is--services-bottom  is--speed-150"  
+		block_bg="bg-plane-services-bottom.png"
+	]]
+	[[azbntple 
+		tpl="8/src/block/site/default/form/panel-print.html" 
+		form_prefix="form-panel__"
+		form_bg="bg-form-panel.jpg"
+		form_mod="is--lg"
+		form_mod_form="is--inline  is--cols-2-5" 
+		form_color="is--white"
+		form_heading="Узнайте стоимость разработки под ваш проект"
+		form_heading_small="  "
+		form_id="fcab" 
+		form_btn_name="Хочу фирменный стиль"
+		form_btn_mod="is--form-inline  is--white"
+	]] 
+	[[azbntple 
+		tpl="8/src/block/site/default/blog/include.html" 
+		block_heading="** Карточка блога **"
+	]]
+	<div class="container content-block__container">
+		[[azbntple 
+			tpl="/src/block/site/default/table/include.html" 
+			block_heading="** Тарифы **"
+		]]			
+	</div>
+	[[azbntple 
+		tpl="/src/block/site/default/text/include.html" 
+		block_heading="** Текстовая страница **"
+	]]
+</div>		
+[[azbntple 
+	tpl="/src/block/site/default/modals/enter.html"
+	modals_prefix="modal-base__" 
+	modals_id="modal-enter"
+	modals_mod="is--enter"
+]]

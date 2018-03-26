@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body class="is--navbar-bottom"> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll abs"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "
+		]] 
+		[[azbntple
+			tpl="/src/block/site/default/content/panel-cross.html"
+			content_prefix="content-block__"       
+			content_mod="is--event  is--gallery"      
+			block_heading_mod="is--page-heading  is--tabs  is--center"
+			block_heading="Крестные ходы"  
+			block_heading_small="  "  
+			block_bread_level1="Духовная жизнь"
+			block_bread_level1_link="{{page.spiritual}}"     
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+		[[azbntple tpl="/src/block/site/default/script/fancybox3.html" ]]
+	</body>
+</html>

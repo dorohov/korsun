@@ -1,0 +1,283 @@
+.kontakty-panel__{
+	&block{	
+		position: relative;
+	}
+	&inner{
+		background: @white-dark;
+		padding: 40px 15px;
+		margin-left: -15px;
+		margin-right: -15px;
+		@media @media-point-screen {
+			margin: 0;
+			position: absolute;
+			z-index: 5;
+			top: 0;
+			bottom: 0;
+			max-width: 655px;
+			min-width: 360px;
+			width: 34vw;
+			padding: 4.1vw 2.7vw;			
+		}
+	}
+	&map{
+		height: 350px;
+		@media @media-point-xs {
+			height: 250px;
+		}
+		@media @media-point-notsmart {
+			height: 700px;
+		}
+		@media @media-point-md1 {
+			height: 500px;
+		}
+		@media @media-point-xxl {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			bottom: 0;
+			height: 100%;
+		}
+	}
+	&map-point{
+		width: 34px;
+		height: 34px;
+		background-color: @b-color-a;
+		border-radius: 50%;
+		border: 2px solid fadeout(@white, 100%);
+		transition: @trs-site;
+		&::hover{
+			border-color: fadeout(@white, 0%);
+		}
+	}
+	/*
+	&tabs-nav{
+		list-style: none;
+		margin: 0 -15px 20px;
+		padding: 0;
+		display: flex;
+		@media @media-point-screen {
+			margin-left: -20px;
+			margin-right: -20px;
+			margin-bottom: 2.5vw;
+		}
+	}
+	&tabs-item{
+		padding: 0 15px;
+		@media @media-point-screen {
+			padding: 0 20px;
+		}
+	}
+	&tabs-link{
+		display: block;
+		padding-left: 15px;
+		font-size: @b-fs + 6;
+		line-height: @b-lh + 4;
+		position: relative;
+		&, &:focus, &:hover{
+			color: @blue;			
+		}
+		.kontakty-panel__tabs-item.active &{
+			font-weight: 500;
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			border-left: 5px solid fadeout(@blue, 0%);
+			border-top: 5px solid fadeout(@blue, 100%);
+			border-bottom: 5px solid fadeout(@blue, 100%);
+			.kontakty-panel__tabs-item.active &{
+				transform: translateY(-50%) rotate(90deg);
+			}
+		}
+	}
+	&tabs-pane{
+		display: none;
+		&.active{display: block;}
+	}*/
+	&item-group{
+
+	}
+	&item{
+		margin-bottom: 20px;
+		&.is--btn{
+			padding-top: 15px;
+		}
+		@media @media-point-screen {
+			margin-bottom: 1.6vw;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&legend{
+		position: absolute;
+		z-index: 2;
+		bottom: 30px;
+		right: 10px;
+		left: 10px;
+	}
+	&legend-item{
+		position: relative;
+		padding-left: 35px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-size: @b-fs - 2;
+		line-height: @b-lh - 4;
+		margin-bottom: 5px;
+	}
+	&legend-icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+}
+
+.kontakty-map__{
+	&panel{
+		width: 24px;
+		height: 24px;
+		transform: translate(-12px,-12px);
+		&.is--location{
+			width: 50px;
+			height: 65px;
+			transform: translate(-25px,-65px);
+		}
+	}
+	&location{
+		width: 50px;
+		height: 65px;
+		color: @red;		
+	}
+	&icon{
+		position: relative;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: @brown-light;    
+		padding: 6px;
+    	color: @white;
+    	border-width: 1px;
+    	border-style: solid;
+    	border-color: fadeout(@white, 100%);
+    	transition: @trs-site;
+		svg{display: block;}
+		&::before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			border-radius: 50%;
+			transition: @trs-site;
+			width: 45px;
+			height: 45px;
+			background: @yellow-bright;
+		}
+		.kontakty-map__panel.is--active &{
+			background: @yellow-bright;
+    		border-color: fadeout(@white, 0%);
+			&::before{
+				transform: translate(-50%, -50%) scale(1);
+				box-shadow: 2px 6.5px 9px 0px fadeout(@black, 75%);
+			}
+		}
+	}
+	&tooltip{
+		background: @white;
+		width: 390px;
+		position: absolute;
+		top: -20px;
+		right: -30px;
+		transform: translate(100%, -100%);
+		padding: 35px 32px 30px;
+		display: none;
+
+		.kontakty-map__panel.is--active &{
+			display: block;
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transform: translate(-75%,55%) rotate(-130deg);
+			border-bottom: 30px solid fadeout(@white, 0%);
+			border-left: 10px solid fadeout(@b-color-a, 100%);
+			border-right: 10px solid fadeout(@b-color-a, 100%);
+		}
+	}
+	&tooltip-heading{
+		position: relative;
+		padding-left: 70px;
+		font-weight: 700;
+		font-size: @b-fs;
+		line-height: @b-lh - 4;
+		margin-bottom: 15px;
+	}
+	&tooltip-icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		color: @yellow-bright;
+		width: 55px;
+		height: 55px;
+	}
+	&tooltip-btn{
+		text-align: right;
+	}
+}
+.kontakty-item__{
+	&item{
+		position: relative;
+		//
+		&, &:hover, &:focus{
+			color: @b-color-h;
+		}
+		span{
+			font-weight: 700;
+			color: @green-dark;
+		}
+		&.is--icon{
+			padding-left: 45px;
+		}
+		//font-size: @b-fs;
+	}
+	&heading{
+		font-size: @b-fs + 6;
+		line-height: @b-lh + 4;
+		margin-bottom: 5px;
+	}
+	&text{
+		color: @brown-dark;
+	}
+	&link{
+		display: block;
+		a[href^="mailto:"]&,
+		a[href^="tel:"]&,
+		&, &:hover, &:focus{
+			color:  @brown-dark;
+		}
+		&.is--tel{
+			display: inline-block;
+		}
+	}
+	&icon{ 
+		position: absolute;
+		top: 0; 
+		left: 0;
+		transition: @trs-site;
+		width: 26px;
+		height: 26px;
+		color: @yellow-bright;
+		//padding: 6px;
+		svg{display: block;}
+	}
+}

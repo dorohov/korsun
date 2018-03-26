@@ -1,0 +1,28 @@
+<li class="{{navbar_prefix}}nav-item  {{navbar_mod}} dropdown">
+	<a href="#" class="dropdown-toggle {{navbar_prefix}}nav-link" data-toggle="dropdown"><span>{{navbar_name}}</span></a>
+	<div class="{{navbar_prefix}}nav-dropdown dropdown-menu">
+		<ul class="{{navbar_prefix}}nav-dropdown-menu">					
+			[[azbntple 
+				tpl="/src/block/site/default/navbar/item-drop-link.html" 
+				navbar_prefix="navbar__" 
+				navbar_mod="  "
+				navbar_name="Праздники" 
+				navbar_link="{{page.holidays}}"
+			]]		
+			[[azbntple 
+				tpl="/src/block/site/default/navbar/item-drop-link.html" 
+				navbar_prefix="navbar__" 
+				navbar_mod="  "
+				navbar_name="Крестные ходы" 
+				navbar_link="{{page.cross}}"
+			]]			
+			[[azbntple 
+				tpl="/src/block/site/default/navbar/item-drop-link.html" 
+				navbar_prefix="navbar__" 
+				navbar_mod="  "
+				navbar_name="Видеоархив" 
+				navbar_link="{{page.video}}"
+			]]
+		</ul>
+	</div>
+</li>

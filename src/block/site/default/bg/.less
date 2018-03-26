@@ -1,0 +1,36 @@
+.bg-block__{
+	&block{
+		overflow: hidden;
+		position: relative;
+	}
+	&container{
+		position: relative;
+		z-index: 5;
+	}
+	&item{
+		@media @media-point-device {display: none;}
+		position: absolute;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		z-index: 1;
+		&.is--help-630x570{
+			max-width: 630px;
+			max-height: 570px;
+			width: 34vw;
+			height: 31vw;
+			right: 9vw;
+			bottom: 0;
+			background-position: right bottom;
+		}
+		&.is--pilgrimage-820x1300{
+			max-width: 820px;
+			max-height: 1300px;
+			width: 43vw;
+			height: 68vw;
+			right: 0;
+			top: 61.3vw;
+			background-position: right bottom;
+		}
+	}
+}

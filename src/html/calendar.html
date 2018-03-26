@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body class="is--navbar-bottom"> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll abs"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "
+		]] 
+		[[azbntple  
+			tpl="/src/block/site/default/content/panel-calendar.html"
+			content_prefix="content-block__"       
+			content_mod="is--event  is--calendar"      
+			block_heading_mod="is--page-heading  is--tabs  is--center"
+			block_heading="Календарь богослужений"  
+			block_heading_small="Все богослужения проходят в храме Корсунской Божией Матери"  
+			block_bread_level1="События"
+			block_bread_level1_link="{{page.event}}"  
+			block_bg="{{url-path-img}}/temp/bg-calendar.jpg"   
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]
+	</body>
+</html>

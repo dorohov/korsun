@@ -1,0 +1,20 @@
+<header class="{{block_prefix}}block">
+	<div class="{{block_prefix}}inner">
+		<div class="{{block_prefix}}bg  is--top" style="background-image: url({{url-path-img}}/bg/bg-header-top.png)"></div>
+		<h1 class="{{block_prefix}}heading">{{block_heading}}</h1>
+		<div class="{{block_prefix}}bg  is--bottom" style="background-image: url({{url-path-img}}/bg/bg-header-bottom.png)"></div>
+		<div class="{{block_prefix}}heading-small">{{block_heading_small}}</div>
+		<div class="{{block_prefix}}btn">
+			[[azbntple 
+				tpl="/src/block/site/default/button/link.html"
+				button_prefix="btn__" 
+				button_mod="  "
+				button_link="{{page.pilgrimage}}"
+				button_name="Поломничество"
+			]]
+		</div>
+		<a href=".scrollto-ready" class="{{block_prefix}}scrollto scrollto" data-scrollto-diff="0">
+			[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="next-panel" ]]
+		</a>
+	</div>
+</header>

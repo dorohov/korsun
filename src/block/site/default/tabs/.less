@@ -1,0 +1,340 @@
+.tabs__{
+	@gutter: 15px;
+	&block{ 
+		@media @media-point-device-lg {
+			background-color: @white;
+			background: @navbar-bg-device;	
+			position: fixed;
+			left: 0;
+			width: 100%;
+			height: ~"calc(100% - @{navbar-device})";
+			z-index: 95;
+			bottom: 0;
+			transform: translateY(~"calc(100% - @{navbar-bottom})");
+			transition: @trs-site;
+		    //transition: all 0.55s cubic-bezier(0.5, 0.5, 0, 1);
+			overflow: hidden;
+			&.is--nofixed{
+				position: relative;
+				background: none;
+				left: inherit;
+				bottom: inherit;
+				height: auto;
+				transform: none;
+				margin-bottom: 30px;
+			}
+		}
+		@media @media-point-xs {
+			&.is--nofixed{display: none;}
+		}
+		@media @media-point-screen-lg {
+			position: relative;
+		}		
+		&.open{
+			transform: translateY(0);
+		}
+		.dropdown-backdrop{display: none;}
+
+		@media @media-point-screen-lg {
+			&.is--aside{
+    			//height: 100%;
+			}
+		}
+	}
+	&btn-block{
+		//background-color: fadeout(@blue-light, 70%);
+		display: block;
+		&, &:focus, &:hover{color: @b-color}
+		@media @media-point-screen-lg {
+			display: none;
+		}
+	}	
+	&container{
+		@media @media-point-screen-lg {
+			width: 100%;
+			padding: 0;
+		}
+	}
+	&btn-icon{
+		width: 24px;
+		height: 24px;
+		@media @media-point-screen-lg {
+			width: 42px;
+			height: 42px;
+		}
+	}
+	&btn{
+		display: flex;
+		align-items: center;
+		padding: 10px 0px;
+	}
+	&btn-name{
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: @b-fs - 2;
+		padding-left: 15px; 
+		color: @b-color-a;
+		transition: @trs-site;
+		.tabs__block.open &{
+			color: @red;
+		}
+	}
+	//hamburger
+	&btn-hamb{
+		position: relative;
+		width: 24px;
+		height: 24px;
+		@media @media-point-screen-lg {
+			display: none;
+		}
+	}
+	&btn-hamb-item{
+		display: block;
+		position: absolute;
+		width: 100%;	
+		height: 2px;
+		left: 0;	
+		transition: @trs-site;
+		background-color: @b-color-a;
+		border-radius: 10px;
+			.tabs__block.open &{
+			//transition: transform 0.15s ease 0.35s, width 0.15s ease 0.2s;
+			transition: @trs-site;
+			background-color: @red;
+		}
+
+		&.is--top{
+			top: 2px;
+			.tabs__block.open &{				
+				//top: ~"calc(50% - 1.5px)";
+				top: 35%;
+				left: 50%;
+				//width: 0;
+				transform: translateX(-50%) scale(0.7, 1);
+			}
+		}	
+		&.is--center{
+			top: ~"calc(50% - 1.5px)";
+			transform-origin: center;
+			.tabs__block.open &{
+				//transform: rotate(45deg);
+				//width: 0;
+				//opacity: 0;
+				transform: rotate(-90deg);
+			}
+		}
+		&.is--center-top{
+			top: 13%;
+			transform-origin: center;			
+			transform: scale(0, 1);
+			.tabs__block.open &{			
+				transform: scale(0.3, 1);
+			}
+		}	
+		&.is--bottom{
+			bottom: 2px;
+			.tabs__block.open &{			
+				bottom: 30%;
+				left: 50%;
+				//background-color: #f7aa52;
+				//width: 0;
+				transform: translateX(-50%) rotate(25deg) scale(0.5, 1);
+			}
+		}
+	}
+	&dropdown{
+		position: relative;
+		height: ~"calc(100% - @{navbar-bottom})";
+		padding-left: 15px;
+    	padding-right: 15px;    
+    	margin-right: auto;
+	    margin-left: auto;
+		@media @media-point-device-lg {
+		}
+		@media @media-point-screen-lg {
+			//height: 100%;
+			height: auto;
+			padding: 10px 0;
+			//background-color: @white;
+			&.is--aside{
+				padding: 0;
+			    max-width: 325px;
+    			margin: 0;
+			}
+		}
+		@media @media-point-md {
+			height: 100%;
+    		width: 95vw;
+		}
+	}
+	&dropdown-inner{
+		position: relative;
+		height: 100%;
+		overflow: auto;
+		padding: 15px 0;
+		@media @media-point-screen-lg {
+			overflow: visible;
+			padding: 0;
+			height: auto;
+			border-top: 1px solid @yellow-dark;
+		}
+	}
+	&nav{
+		list-style: none;
+		padding: 0px;
+		margin: 0; 
+		//margin: 0 -(@gutter); 
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		justify-content: center;
+		@media @media-point-device-lg {
+			margin-top: -(@gutter + 5);
+		}
+		@media @media-point-screen-lg {
+			margin: 0 -(@gutter + 12); 
+		}			
+		
+	}
+	&item{
+		//margin-bottom: 15px;
+		//padding: 0 @gutter;
+		//.makeCols(12, 12);	
+		@media @media-point-device-lg {
+			.makeCols(12, 12);
+			padding-top: @gutter + 5;
+		}	
+		@media @media-point-screen-lg {
+			padding: 0 @gutter + 12;
+		}
+		//&:last-child{margin-bottom: 0;}	
+	}
+	&link{
+		position: relative;
+		display: block;
+		//padding: 5px 42px;
+		font-size: @b-fs + 2;
+		line-height: @b-lh + 4;
+		color: @yellow-dark;
+		padding: 0 0 0 30px;
+		@media @media-point-screen-lg {
+			.calcFontSize(18, 23, 1200, 1680);
+			.calcLineHeight(22, 27, 1200, 1680);
+		}
+		&.dropdown-toggle{
+
+		}
+		@media @media-point-device-lg {
+			display: inline-block;
+		}
+		@media @media-point-screen-lg {
+			padding: 15px 0;
+		}
+		span{
+			position: relative;
+			z-index: 2;			
+		}
+		&::before,
+		&::after{
+			content: '';
+			position: absolute;
+			border-radius: 50%;
+			transition: @trs-site;
+			background-color: @white;
+		}
+		&::before{
+			z-index: 3;
+			width: 7px;
+			height: 7px;
+			border: 2px solid @yellow-dark;
+			left: 8px;
+			top: 11px;
+			@media @media-point-screen-lg {
+				left: 50%;
+				top: 0;
+				transform: translate(-50%, -50%);
+			}
+		}
+		&::after{
+			z-index: 2;
+			width: 24px;
+			height: 24px;
+			transform: scale(0);
+			border: 1px solid @yellow-dark;    
+			top: 3px;
+    		left: 0;
+			@media @media-point-screen-lg {
+				left: 50%;
+				top: 0;
+				transform: translate(-50%, -50%) scale(0);
+			}
+		}
+		.tabs__item.is--active &,
+		&:hover{
+			color: @red;
+			&::before{
+				background-color: @b-color-a;
+				border-color: @b-color-a;
+				transform: scale(1.5);
+				@media @media-point-screen-lg {
+					transform: translate(-50%, -50%) scale(1.5);
+				}
+			}
+			&::after{
+				transform: scale(1);
+				@media @media-point-screen-lg {
+					transform: translate(-50%, -50%) scale(1);
+				}
+			}
+		}
+		.tabs__item.open &,
+		.tabs__item.is--active &{
+			cursor: default;
+			color: @red;
+		}
+	}
+	&dropdown-icon{ 
+		width: 10px;
+		height: 7px;
+		position: absolute!important;
+		top: 11px;
+		//top: 50%;
+		//transform: translateY(-50%);
+		left: 25px;
+		.tabs__item.open &{
+			transform: translateY(-50%) rotate(180deg);
+		}
+		&::before,
+		&::after{
+			content: '';
+			position: absolute;
+			top: 25%;
+			width: 65%;
+			height: 2px;
+			background-color: @b-color-a;			
+		}
+		&::before{
+			left: 0;
+			transform: rotate(45deg);
+		}
+		&::after{
+			right: 0;
+			transform: rotate(-45deg);
+		}
+	}
+	&dropdown-menu{
+		position: relative;
+		z-index: 1;
+		top: 0;
+		margin-left: 55px;
+		margin-top: 0;
+		padding: 0;
+	}
+	&dropdown-item{
+		margin-bottom: 5px;
+	}
+	&dropdown-link{
+		color: @b-color-h;
+	}
+
+}

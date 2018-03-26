@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll abs"
+			navbar_prefix="navbar__"   
+			navbar_mod="is--white"     
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/header/panel.html"
+			block_prefix="header-block__"
+			block_heading="Корсунская пустынь"
+			block_heading_small="Ливенская епархия, с.Корсунь Верховского района"
+		]]	
+		[[azbntple  
+			tpl="/src/block/site/default/content/panel-ad-index.html"
+			content_prefix="content-block__"
+			content_mod="is--ad-index"
+		]]
+
+		[[azbntple  
+			tpl="/src/block/site/default/content/panel-about-index.html"
+			content_prefix="content-block__"      
+			content_mod="is--event  is--building-card  is--about-index"      
+			block_heading_mod="is--page-heading  is--center  "
+			block_heading="О корсуни"   
+		]]
+		[[azbntple  
+			tpl="/src/block/site/default/content/panel-news-index.html"
+			content_prefix="content-block__"
+			content_mod="is--news-index"
+			block_heading_mod="is--page-heading  is--center  is--news-index"
+			block_heading="Последние события"
+		]]		
+		[[azbntple 
+			tpl="/src/block/site/default/form/panel-pilgrimage.html"
+			form_prefix="form-panel__"
+			form_mod="is--pilgrimage" 
+			form_bg="{{url-path-img}}/temp/bg-form-item1.jpg"
+			
+			header_mod="is--page-heading  is--form-heading  is--center  is--white"
+			heading_title="Паломничество"
+			heading_small="Наш монастырь по благословению митрополита Орловского и Болховского Антония, совместно с епархиальным паломническим отделом, организует паломнические поездки из Орла по святым местам"
+
+			form_header_mod="is--form  is--center  is--white"
+			form_heading="Запишитесь на поездку по святым местам заранее" 
+			form_heading_small="Заполните форму ниже" 
+
+			form_id="fpr"
+			form_mod_form="is--inline"
+			form_color="is--white"
+			form_btn_mod="is--sm"
+			form_btn_name="Оптравить"
+		]]
+		[[azbntple  
+			tpl="/src/block/site/default/content/panel-spiritual-index.html"
+			content_prefix="content-block__"
+			content_mod="is--spiritual-index"
+			block_heading_mod="is--page-heading  is--center  is--news-index"
+			block_heading="Духовная жизнь"
+		]]
+		[[azbntple  
+			tpl="/src/block/site/default/content/panel-help-index.html"
+			content_prefix="content-block__"
+			content_mod="is--help-index"
+			block_heading_mod="is--page-heading  is--center"
+			block_heading="Просим о помощи"
+		]]
+		[[azbntple  
+			tpl="/src/block/site/default/contacts/panel.html"
+			content_prefix="content-block__"
+			content_mod="is--contacts"   
+			block_prefix="kontakty-panel__"
+			block_heading_mod="is--page-heading  is--contacts"
+			block_heading="Контакты"   
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]		
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]  
+		[[azbntple tpl="/src/block/site/default/script/slick.html" ]]
+		[[azbntple tpl="/src/block/site/default/script/YandexMap.html" ]]
+	</body>
+</html>
