@@ -3399,74 +3399,6 @@ body.rtl .formError .formErrorArrow {
 		}
 		@media @media-point-screen-lg{position: static;}
 	}
-	/*&collapse-panel{
-		@media @media-point-screen-lg {
-			border-bottom: 1px solid fadeout(@blue-light, 50%);
-			//padding: 20px 0;
-		}
-	}	
-	&collapse-row{
-		align-items: center;
-		@media @media-point-device-lg {
-			flex-wrap: wrap;
-			margin-top: -20px;
-		}
-		@media @media-point-screen-lg {
-			justify-content: space-between; 
-		}
-		&.is--jcfe{
-			justify-content: flex-end;
-		}
-		&.is--inner{
-			justify-content: space-between;
-		}
-	}
-	&collapse-cols{
-		@media @media-point-device-lg {
-			padding-top: 20px;
-			.makeCols(12, 12);
-		}
-		&.is--left{
-			@media @media-point-device-lg {display: none;}
-			@media @media-point-screen-lg {
-				.makeCols(1.4, 12);
-			}
-			@media @media-point-xxl {
-				.makeCols(1, 12);
-			}
-		}
-		&.is--right{	
-			@media @media-point-screen-lg {
-				.makeCols(10.6, 12);
-			}
-			@media @media-point-xxl {
-				.makeCols(11, 12);
-			}		
-		}
-		&.is--inner-left{
-			@media @media-point-device-lg {
-				order: 1;
-			}
-		}
-		&.is--inner-right{
-			@media @media-point-xxl {
-				.makeCols(3.65, 12);
-			}
-		}
-	}
-	&info-row{
-		justify-content: space-between;
-		@media @media-point-device-lg {
-			flex-wrap: wrap;
-			margin-top: -20px;
-		}
-	}
-	&info-cols{
-		@media @media-point-device-lg {
-			.makeCols(12, 12);
-			padding-top: 20px;
-		}
-	}*/
 	//nav
 	@gutter: 15px;
 	@gutter_screen: 1.15vw;
@@ -3479,8 +3411,8 @@ body.rtl .formError .formErrorArrow {
 		//text-transform: uppercase;
 		margin-left: -(@gutter);
 		margin-right: -(@gutter);
-		font-size: @navbar-fs + 6;
-		line-height: @navbar-lh + 8;
+		font-size: @navbar-fs + 4;
+		line-height: @navbar-lh + 6;
 		@media @media-point-device-lg{
 			flex-wrap: wrap;
 		}
@@ -3499,7 +3431,7 @@ body.rtl .formError .formErrorArrow {
 		padding-right: @gutter;
 		@media @media-point-device-lg{
 			width: 100%; 
-			margin-bottom: 15px;
+			margin-bottom: 8px;
 			&:last-child{margin-bottom: 0px}
 			&.is--logotip{display: none;}
 		}
